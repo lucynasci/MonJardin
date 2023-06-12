@@ -1,0 +1,202 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Styles pour le header */
+
+header {
+  background-color: #e4fbca;
+  color: #589423;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header div {
+  display: flex;
+}
+
+header img {
+  height: 80px;
+}
+
+header h1 {
+  font-size: 40px;
+  margin-left: 15px;
+}
+
+/* Styles pour la navegation */
+nav {
+  background-color: #e4fbca;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 30px;
+}
+
+nav ul li a {
+  color: #589423;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: rgb(85, 90, 90);
+}
+
+nav button {
+  background-color: #589423;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  color: #e4fbca;
+  font-size: 16px;
+}
+
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  font-size: 25px;
+  color: #45a049;
+}
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #45a049;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+input[type=submit]:hover {
+  background-color: #06521d;
+}
+
+input {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #e4fbca;
+  padding: 20px;
+}
+
+/*Styles pour le footer*/
+footer {
+  background-color: #06521d;
+  color: #e4fbca;
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Partie Responsive*/
+@media only screen and (min-width: 1920px) {
+  .menuBurger {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 844px) and (max-width: 1920px) {
+  .menuBurger {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 844px) {
+  * {
+    /*pour les tailles soient corrects */
+    box-sizing: border-box;
+  }
+
+  .menuBurger {
+    /* Pour que le menu reste en place*/
+    position: absolute;
+    z-index: 1;
+    /* pour que le menu ne soit pas sur le texte*/
+    width: 0px;
+  }
+
+  #hamburger-logo {
+    /* Pour que le curseur soit un pointeur*/
+    cursor: pointer;
+    background: #589423;
+    width: 200px;
+    display: block;
+    color: #e4fbca;
+    /* pour qu'il s'affiche toujours et qu'il soit "range" par default*/
+    text-align: right;
+    transform: translateX(-168px);
+    padding: 10px;
+  }
+
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #06521d;
+    overflow: hidden;
+    width: 200px;
+    margin-top: -5px;
+    transform: translateX(-200px);
+  }
+
+  #hamburger-logo,
+  nav {
+    /* pour qu'il y ait une animation */
+    transition: 0.7s;
+  }
+
+  /* lorsque que le menu est "coché" le logo change de propriété */
+  #hamburger:checked~#hamburger-logo,
+  #hamburger:checked~nav {
+    /* Changement de la position pour afficher les menus */
+    transform: translate(0);
+  }
+
+  nav a {
+    color: #e4fbca;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  nav a:hover {
+    background: #e4fbca;
+    color: #06521d;
+  }
+}

@@ -1,0 +1,471 @@
+/* Reinitialisation des styles par default */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles generaux */
+body {
+    background-color: aliceblue;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styles pour le header */
+
+header {
+    background-color: #e4fbca;
+    color: #589423;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div {
+    display: flex;
+}
+
+header img {
+    height: 80px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-left: 15px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styles pour la navegation */
+nav {
+    background-color: #e4fbca;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: #589423;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(85, 90, 90);
+}
+
+nav button {
+    background-color: #589423;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    color: #e4fbca;
+    font-size: 16px;
+}
+
+/* Styles pour les sections */
+
+#Conception {
+    background-color: white;
+    display: flex;
+}
+
+#Conception h1 {
+    font-size: 45px;
+    color: #589423;
+    padding: 30px;
+    margin-top: 60px;
+    line-height: 1;
+}
+
+#Conception h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(70, 69, 69);
+    padding: 30px;
+}
+
+#Conception img {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.img_container {
+    width: 100%;
+}
+
+#concept {
+    display: flex;
+    flex-direction: column;
+}
+
+#Description {
+    background-color: #e4fbca;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#Description img {
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+    box-shadow: 2px 3px 8px rgb(134, 134, 134);
+}
+
+#Description div {
+    margin: 6px;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+#Description article {
+    padding: 20px;
+}
+
+.image_plante_Desc {
+    display: flex;
+    justify-content: center;
+}
+
+.image_plante_Nous img {
+    width: 150px;
+    height: 150px;
+}
+
+#Nous {
+    display: flex;
+    flex-direction: row;
+}
+
+.image_PersonnePlante img {
+    width: 509px;
+    height: 509px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto 2rem;
+    /*clip-path: ellipse(33% 50%);
+    margin-top: 5px;*/
+}
+
+.Nous_bloc {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.Nous_bloc_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Nous_Grand_Bloc {
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.nous_tous {
+    display: flex;
+    padding: 20px 0;
+}
+
+#Nous h5 {
+    font-size: 20px;
+    color: #589423;
+}
+
+/* Style pour le footer */
+footer {
+    background-color: #06521d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Zone de transition */
+
+#Conception,
+#Description,
+#Nous {
+    padding: 3px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#Conception:hover {
+    transform: scale(1);
+    overflow: auto;
+    background-color: rgb(225, 236, 226);
+    color: #06521d;
+    border: 1 px solid white;
+}
+
+/* Flashing Flores */
+#Conception:hover img {
+    opacity: 1;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#Description:hover {
+    transform: scale(1);
+    overflow: auto;
+    background-color: rgb(225, 236, 226);
+    color: #06521d;
+    border: 1 px solid white;
+}
+
+#Nous:hover {
+    transform: scale(1);
+    overflow: auto;
+    background-color: rgb(225, 236, 226);
+    color: #06521d;
+    border: 1 px solid white;
+}
+
+/* Partie Responsive*/
+@media only screen and (min-width: 1920px) {
+    .menuBurger {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 844px) and (max-width: 1920px) {
+    .menuBurger {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 844px) {
+    * {
+        /*pour les tailles soient corrects */
+        box-sizing: border-box;
+    }
+
+    body {
+        /* pour coller notre menu au bord sans space */
+        margin: 0;
+    }
+
+    .menu {
+        /* Faire disparetre notre navbar*/
+        display: none;
+    }
+
+    .menuBurger {
+        /* Pour que le menu reste en place*/
+        position: absolute;
+        z-index: 1;
+        /* pour que le menu ne soit pas sur le texte*/
+        width: 0px;
+    }
+
+    main {
+        /* pour pas que le texte soit sous le menu*/
+        /* margin-left: 50px;*/
+        width: 100%;
+        /* text-align: justify; */
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #hamburger-logo {
+        /* Pour que le curseur soit un pointeur*/
+        cursor: pointer;
+        background: #589423;
+        width: 200px;
+        display: block;
+        color: #e4fbca;
+        /* pour qu'il s'affiche toujours et qu'il soit "range" par default*/
+        text-align: right;
+        transform: translateX(-168px);
+        padding: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        background-color: #06521d;
+        overflow: hidden;
+        width: 200px;
+        margin-top: -5px;
+        transform: translateX(-200px);
+    }
+
+    #hamburger-logo,
+    nav {
+        /* pour qu'il y ait une animation */
+        transition: 0.7s;
+    }
+
+    /* lorsque que le menu est "coché" le logo change de propriété */
+    #hamburger:checked~#hamburger-logo,
+    #hamburger:checked~nav {
+        /* Changement de la position pour afficher les menus */
+        transform: translate(0);
+    }
+
+    nav a {
+        color: #e4fbca;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    nav a:hover {
+        background: #e4fbca;
+        color: #06521d;
+    }
+
+    h2 {
+        margin-left: 15px;
+    }
+
+    #Conception {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #Conception img {
+        width: 100%;
+    }
+
+    .image_plante_Nous img {
+        width: 150px;
+    }
+
+    #Description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Description article p {
+        text-align: justify;
+        margin-top: 30px;
+    }
+
+    #Nous {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nous_tous,
+    .Nous_Grand_Bloc,
+    .Nous_bloc,
+    .Nous_bloc_row {
+        display: flex;
+        flex-flow: wrap column;
+    }
+
+    .image_PersonnePlante {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image_PersonnePlante img {
+        /* width: auto;
+        height: 255px;
+        clip-path: ellipse(33% 50%);
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        border: yellow solid 2px;*/
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .Nous_Grand_Bloc {
+        padding: 30px;
+        margin-right: 0px;
+    }
+
+    .Nous_Grand_Bloc h2 {
+        margin-left: 0px;
+        text-align: center;
+        line-height: 3;
+    }
+
+    .Nous_Grand_Bloc p {
+        text-align: justify;
+    }
+
+    .Nous_bloc_row h5 {
+        text-align: center;
+        line-height: 3;
+    }
+
+    .Nous_bloc_row p {
+        text-align: justify;
+    }
+
+    .Nous_bloc_row {
+        padding-bottom: 20px;
+    }
+
+    /*Styles pour le footer*/
+    footer {
+        background-color: #06521d;
+        color: #e4fbca;
+        padding: 20px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    /*Zone de la transition*/
+    #Conception,
+    #Description,
+    #Nous {
+        margin-bottom: 10px;
+        border-radius: 5px;
+        transition: transform 0.3s case, background-color 0.3s ease;
+    }
+
+}
